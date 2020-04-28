@@ -11,9 +11,10 @@ class RecipeController < ApplicationController
 
     get '/recipes/new' do
         if logged_in?
-            
+            @user= current_user
+            erb :'recipes/new'
         else
-
+            redirect to '/'
         end
     end
 

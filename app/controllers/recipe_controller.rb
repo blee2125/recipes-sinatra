@@ -9,4 +9,12 @@ class RecipeController < ApplicationController
         end
     end
 
+    get '/recipes/new' do
+        if logged_in?
+            
+        else
+
+        end
+    end
+
 end

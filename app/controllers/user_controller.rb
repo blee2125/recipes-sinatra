@@ -21,10 +21,19 @@ class UserController < ApplicationController
     end
 
     get '/login' do
-        if !session[:user_id]
-            erb :'/user/login'
-        else
+        if logged_in?
             redirect to '/recipes'
+        else
+            erb :'/user/login'
+        end
+    end
+
+    get '/logout' do
+        if logged_in?
+            session.clear
+            redirect to '/login'
+        else
+            redirect to '/'
         end
     end
 

@@ -26,6 +26,7 @@ class RecipeController < ApplicationController
                 @recipe= current_user.recipes.create(name: params[:recipe_name],
                     ingredients: params[:ingredients].split(/\r\n/),
                     directions: params[:directions].split(/\r\n/))
+                redirect to '/recipes'
             end
         else
             redirect to '/login'

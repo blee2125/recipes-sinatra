@@ -3,7 +3,12 @@
 <form action="/recipes/<%= @recipe.slug %>" method="post">
     <input type="hidden" name="_method" value="patch">
     Name: <input type="text" name="recipe_name" value="<%= @recipe.name %>"><br>
-    Ingredients: <textarea row="20" cols="40" name="ingredients"><%= @recipe.ingredients %></textarea><br>
-    Directions: <textarea name="directions"><%= @recipe.directions %></textarea><br>
+    Ingredients: <textarea rows="20" cols="80" name="ingredients"><%= @recipe.ingredients %></textarea><br>
+    Directions:  <textarea rows="20" cols="80" name="directions"><%= @recipe.directions %></textarea><br>
     <input type="submit" value="submit">
+</form>
+
+<form action="/recipes/<%= @recipe.slug %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
 </form>

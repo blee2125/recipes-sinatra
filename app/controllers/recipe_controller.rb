@@ -18,9 +18,22 @@ class RecipeController < ApplicationController
         end
     end
 
+    get '/recipes/:slug/edit' do
+        if logged_in?
+            @recipe= Recipe.find_by_slug(params[:slug])
+            erb :'recipes/edit'
+        else
+            redirect to '/'
+        end
+    end
+
     get '/recipes/:slug' do
-        @recipe= Recipe.find_by_slug(params[:slug])
-        erb :'recipes/show'
+        if logged_in?
+            @recipe= Recipe.find_by_slug(params[:slug])
+            erb :'recipes/show'
+        else
+            redirect to '/'
+        end
     end
 
     post '/recipes' do

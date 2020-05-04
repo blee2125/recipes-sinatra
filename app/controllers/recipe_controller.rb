@@ -65,4 +65,14 @@ class RecipeController < ApplicationController
         end
     end
 
+    delete '/recipes/:slug' do
+        if logged_in?
+            @recipe= Recipe.find_by_slug(params[:slug])
+            @recipe.delete
+            redirect to '/recipes'
+        else
+            redirect to '/'
+        end
+    end
+
 end

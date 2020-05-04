@@ -1,5 +1,5 @@
 <h1>Recipe Index</h1>
 
 <% @recipes.each do |recipe| %>
-    <%= recipe.name %><br>
+    <a href="/recipes/<%= recipe.slug %>"><%= recipe.name %></a><br>
 <% end %>

@@ -1,1 +1,13 @@
 <h1>Show Recipe</h1>
+
+<h2><%= @recipe.name %></h2>
+
+<h3>Ingredients</h3>
+    <% @recipe.ingredients.split(/\r\n/).each do |ingredient| %>
+        <%= ingredient %><br>
+    <% end %>
+
+<h3>Directions</h3>
+    <% @recipe.directions.split(/\r\n/).each do |direction| %>
+        <%= direction %><br>
+    <% end %>

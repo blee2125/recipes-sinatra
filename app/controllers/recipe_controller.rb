@@ -52,4 +52,17 @@ class RecipeController < ApplicationController
         end
     end
 
+    patch '/recipes/:slug' do
+        if logged_in?
+            @recipe= Recipe.find_by_slug(params[:slug])
+            @recipe.name= params[:recipe_name]
+            @recipe.ingredients= params[:ingredients]
+            @recipe.directions= params[:directions]
+            @recipe.save
+            redirect to "/recipes/#{@recipe.slug}"
+        else
+            redirect to '/login'
+        end
+    end
+
 end

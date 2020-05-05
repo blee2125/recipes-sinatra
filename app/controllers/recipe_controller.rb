@@ -55,10 +55,12 @@ class RecipeController < ApplicationController
     patch '/recipes/:slug' do
         if logged_in?
             @recipe= Recipe.find_by_slug(params[:slug])
-            @recipe.name= params[:recipe_name]
-            @recipe.ingredients= params[:ingredients]
-            @recipe.directions= params[:directions]
-            @recipe.save
+            if @recipe && @recipe.user == current_user
+                @recipe.name= params[:recipe_name]
+                @recipe.ingredients= params[:ingredients]
+                @recipe.directions= params[:directions]
+                @recipe.save
+            end
             redirect to "/recipes/#{@recipe.slug}"
         else
             redirect to '/login'
@@ -68,7 +70,9 @@ class RecipeController < ApplicationController
     delete '/recipes/:slug' do
         if logged_in?
             @recipe= Recipe.find_by_slug(params[:slug])
-            @recipe.delete
+            if @recipe && @recipe.user == current_user
+                @recipe.delete
+            end
             redirect to '/recipes'
         else
             redirect to '/'

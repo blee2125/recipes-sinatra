@@ -1,8 +1,10 @@
 <h1>New Recipe</h1>
 
 <form action="/recipes" method="post">
-    Name: <input type="text" name="recipe_name"><br>
-    Ingredients: <textarea rows="20" cols="80" name="ingredients"></textarea><br>
-    Directions: <textarea rows="20" cols="80" name="directions"></textarea><br>
+    Name: <input type="text" name="recipe_name" size="50" required><br>
+    Ingredients: <br>
+    <textarea rows="20" cols="80" align="left" name="ingredients" required></textarea><br>
+    Directions: <br>
+    <textarea rows="20" cols="80" align="right" name="directions" required></textarea><br>
     <input type="submit" value="submit">
 </form>

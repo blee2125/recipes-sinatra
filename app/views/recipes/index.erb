@@ -1,5 +1,8 @@
 <h1>Recipe Index</h1>
 
+
 <% @recipes.each do |recipe| %>
-    <a href="/recipes/<%= recipe.slug %>"><%= recipe.name %></a><br>
+    <% if current_user.id == recipe.user_id %>
+        <a href="/recipes/<%= recipe.slug %>"><%= recipe.name %></a><br>
+    <% end %>
 <% end %>

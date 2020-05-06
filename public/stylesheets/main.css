@@ -147,7 +147,7 @@ input[type=text] {
   border-color: darkolivegreen;
 }
 
-input[type=password] {
+input#password {
   background-color: blanchedalmond;
   border-color: darkolivegreen;
 }

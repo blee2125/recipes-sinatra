@@ -147,6 +147,16 @@ input[type=text] {
   border-color: darkolivegreen;
 }
 
+input[type=password] {
+  background-color: blanchedalmond;
+  border-color: darkolivegreen;
+}
+
+input[type=username] {
+  background-color: blanchedalmond;
+  border-color: darkolivegreen;
+}
+
 a {
   color: darkred;
 }

@@ -11,3 +11,8 @@
     <% @recipe.directions.split(/\r\n/).each do |direction| %>
         <%= direction %><br>
     <% end %>
+
+    <br>
+    <% if @recipe.user == current_user %>
+        <a href="/recipes/#{@recipe.slug}/edit" class="button"><button>Edit Recipe</button></a>
+    <% end %>

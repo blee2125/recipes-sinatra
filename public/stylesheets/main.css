@@ -13,6 +13,9 @@
 
   /* --- Welcome Page Styles --- */
   body {
+    background-image: url(https://wallpapershome.com/images/pages/pic_h/5971.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: lightblue;
     color: #333;
     font-family: Sans-Serif;
@@ -20,7 +23,7 @@
   }
 
   .wrapper {
-    background: #fff;
+    background: tan;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
     box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -112,4 +115,38 @@
     font-size: 18px;
     line-height: 24px;
   }
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border-color: darkolivegreen;
+
+  background-color: saddlebrown;
+  color: blanchedalmond;
+  font-size: 14px;
+}
+
+input[type=submit] {
+  padding: 6px;
+  border-radius: 8px;
+  border-color: darkolivegreen;
+  color: blanchedalmond;
+  background: saddlebrown;
+}
+
+textarea {
+  border-radius: 8px;
+  resize: none;
+  background-color: blanchedalmond;
+  border-color: darkolivegreen;
+}
+
+input[type=text] {
+  background-color: blanchedalmond;
+  border-color: darkolivegreen;
+}
+
+a {
+  color: darkred;
 }

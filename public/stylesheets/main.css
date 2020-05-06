@@ -150,3 +150,9 @@ input[type=text] {
 a {
   color: darkred;
 }
+
+header {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}

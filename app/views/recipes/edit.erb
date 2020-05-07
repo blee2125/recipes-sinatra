@@ -2,9 +2,11 @@
 
 <form action="/recipes/<%= @recipe.slug %>" method="post">
     <input type="hidden" name="_method" value="patch">
-    Name: <input type="text" name="recipe_name" value="<%= @recipe.name %>"><br>
-    Ingredients: <textarea rows="20" cols="80" name="ingredients"><%= @recipe.ingredients %></textarea><br>
-    Directions:  <textarea rows="20" cols="80" name="directions"><%= @recipe.directions %></textarea><br>
+    Name: <input type="text" name="recipe_name" size="50" value="<%= @recipe.name %>"><br>
+    Ingredients: <br>
+    <textarea rows="20" cols="80" name="ingredients"><%= @recipe.ingredients %></textarea><br>
+    Directions:  <br>
+    <textarea rows="20" cols="80" name="directions"><%= @recipe.directions %></textarea><br>
     <input type="submit" value="Submit">
 </form>
 

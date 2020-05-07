@@ -5,10 +5,11 @@
     Name: <input type="text" name="recipe_name" value="<%= @recipe.name %>"><br>
     Ingredients: <textarea rows="20" cols="80" name="ingredients"><%= @recipe.ingredients %></textarea><br>
     Directions:  <textarea rows="20" cols="80" name="directions"><%= @recipe.directions %></textarea><br>
-    <input type="submit" value="submit">
+    <input type="submit" value="Submit">
 </form>
 
 <form action="/recipes/<%= @recipe.slug %>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
+    <input type="submit" value="Delete">
 </form>
+<a href="/recipes" class="button"><button>Cancel</button></a>

@@ -14,9 +14,9 @@
   /* --- Welcome Page Styles --- */
   body {
     background-image: url(spices-3840x2160-pepper-chilli-basil-nutmeg-cinnamon-5971.jpg);
-    background-size: cover;
+    background-position: center;
     background-repeat: repeat;
-    background-color: lightblue;
+    background-color: black;
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
@@ -121,18 +121,20 @@ button {
   padding: 10px;
   border-radius: 8px;
   border-color: darkolivegreen;
-
+  width: 100px;
   background-color: saddlebrown;
   color: blanchedalmond;
   font-size: 14px;
 }
 
 input[type=submit] {
-  padding: 6px;
+  padding: 10px;
   border-radius: 8px;
+  font-size: 14px;
   border-color: darkolivegreen;
   color: blanchedalmond;
   background: saddlebrown;
+  width: 100px;
 }
 
 textarea {
@@ -140,6 +142,7 @@ textarea {
   resize: none;
   background-color: blanchedalmond;
   border-color: darkolivegreen;
+  width: -webkit-fill-available;
 }
 
 input[type=text] {

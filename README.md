@@ -2,6 +2,17 @@
 
 This application was built in Sinatra to allow multiple users to store recipes.
 
+**Features:**
+1. Create a 🥩recipe🍳.
+
+2. See everyone's 🍚recipes🍣.
+
+3. Edit a 🍪recipe🥗.
+
+4. Delete a 🌮recipe🌯.
+
+![edit gif](https://github.com/blee2125/recipes-sinatra/blob/master/edit%20recipe.gif)
+
 ## Install Instructions
 
 Fork and clone this repository, then run "bundle install" to install required gems.
